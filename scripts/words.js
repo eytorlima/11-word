@@ -8,7 +8,7 @@ const palavras = [
     "censo", "cigar", "circo", "claro", "clero", "coisa", "comer", "copas", "corça", "costa",
     "criar", "cruel", "cuida", "dança", "darás", "dardo", "darlo", "data", "debil", "dedos",
     "defaz", "deixa", "dente", "desejo", "desta", "dizer", "doçes", "domar", "dorso", "dotar",
-    "douto", "drama", "dúbia", "duplo", "ébrio", "efeto", "elide", "emana", "enxer", "equal",
+    "douto", "drama", "dúbia", "duplo", "efeto", "elide", "emana", "enxer", "equal",
     "esmo", "estro", "éter", "ética", "europa", "exato", "fazia", "fecho", "ferro", "fizera",
     "florir", "fofos", "fome", "força", "formo", "fraco", "fundo", "gabar", "ganha", "geral",
     "gesto", "golpe", "grava", "guarda", "harpa", "homem", "horas", "hóspes", "ícone", "idade",
@@ -70,7 +70,7 @@ const palavraB = [
 ];
 const palavraC = [
     'camin', 'coral', 'corre', 'canto', 'campo', 'caixa', 'coroa', 'circo', 'clube', 'cobra',
-        'cidade', 'carro', 'corpo', 'carta', 'corte', 'colhe', 'crise', 'crist', 'cuida', 'cúria'
+        'cidade', 'carro', 'corpo', 'carta', 'corte', 'colhe', 'crise', 'cuida', 'cúria'
 ];
 const palavraD = [
     'drama', 'dança', 'dardo', 'doçur', 'débil', 'dengo', 'doçur', 'dócil', 'dedos', 'dizer',
@@ -81,7 +81,7 @@ const palavraE = [
         'esteio', 'etapa', 'edson', 'erika', 'elias', 'endos', 'escoa', 'esfor', 'entra'
 ];
 const palavraF = [
-    'fazem', 'fique', 'foram', 'futur', 'fusca', 'fraco', 'falar', 'ferro', 'fugir', 'fundo',
+    'fazem', 'fique', 'foram', 'fusca', 'fraco', 'falar', 'ferro', 'fugir', 'fundo',
         'falha', 'força', 'frota', 'fizem', 'fuzil', 'feixe', 'fundo', 'frase', 'fuzis', 'famos'
 ];
 const palavraG = [
@@ -105,7 +105,7 @@ const palavraK = [
         'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma'
 ];
 const palavraL = [
-    'lugar', 'lente', 'louco', 'litor', 'largo', 'luzia', 'louça', 'linda', 'limpo', 'lunar',
+    'lugar', 'lente', 'louco', 'litro', 'largo', 'luzia', 'louça', 'linda', 'limpo', 'lunar',
         'lívia', 'líder', 'linda', 'largo', 'luzia', 'lumin', 'louça', 'luzia', 'lugar', 'linda'
 ];
 const palavraM = [
@@ -271,6 +271,9 @@ for(let i = 0; i < palavras.length; i++){
     }
 }
 
-export {palavras};
+const nr = Math.floor(Math.random() * 572);
+var word = palavras[nr];
+word = word.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+export {word};
 
 //571 Palavras diferentes de 5 letras //

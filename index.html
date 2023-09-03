@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="assets/images/word.png" type="image/x-icon">
+    <title>Word</title>
+</head>
+<body>
+    <h1 class="title">WORD</h1>
+    <button class="tutorial">?</button>
+    <div class="menu">
+        <div class="text">
+            <button class="close">X</button>
+            <p>
+                Descubra a palavra certa em 6 tentativas. Depois de cada tentativa, as peças mostram o quão perto você está da solução.
+            </p>
+            <p>
+                Quando uma letra fica com fundo <span class="verde">verde</span> quer dizer que ela existe na palavra e está na posição correta.
+            </p>
+            <p>
+                Quando uma letra fica com fundo <span class="amarelo">amarelo</span> quer dizer que ela existe na palavra, mas está na posição errada.
+            </p>
+            <p>
+                Se uma tecla fica com fundo <span class="preto">preto</span> quer dizer que ela não existe na palavra.
+            </p>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="try">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="try">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="try">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="try">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="try">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="try">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </main>
+
+    <section class="keyboard">
+        <div class="line">
+            <button class="q tecla">Q</button>
+            <button class="w tecla">W</button>
+            <button class="e tecla">E</button>
+            <button class="r tecla">R</button>
+            <button class="t tecla">T</button>
+            <button class="y tecla">Y</button>
+            <button class="u tecla">U</button>
+            <button class="i tecla">I</button>
+            <button class="o tecla">O</button>
+            <button class="p tecla">P</button>
+        </div>
+        <div class="line l2">
+            <button class="a tecla">A</button>
+            <button class="s tecla">S</button>
+            <button class="d tecla">D</button>
+            <button class="f tecla">F</button>
+            <button class="g tecla">G</button>
+            <button class="h tecla">H</button>
+            <button class="j tecla">J</button>
+            <button class="k tecla">K</button>
+            <button class="l tecla">L</button>
+            <button class="delete"><img src="assets/images/delete.png" alt="Delete"></button>
+        </div>
+        <div class="line l3">
+            <button class="z tecla">Z</button>
+            <button class="x tecla">X</button>
+            <button class="c tecla">C</button>
+            <button class="v tecla">V</button>
+            <button class="b tecla">B</button>
+            <button class="n tecla">N</button>
+            <button class="m tecla">M</button>
+            <button class="enter">ENTER</button>
+        </div>
+    </section>
+    <!-- <script type="module" src="scripts/index.js"></script> -->
+    <script type="module" src="scripts/menu.js"></script> 
+    <script type="module" src="scripts/words.js"></script>
+</body>
+</html>

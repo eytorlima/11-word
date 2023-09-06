@@ -43,7 +43,7 @@ keyEnter.addEventListener("click", () => {
     if(bP0 == '' || bP1 == '' || bP2 == '' || bP3 == '' || bP4 == ''){
         window.alert("Preencha todos os campos adequadamente!");
     } else {
-
+        verifyTry();
         resetInputs();
         console.log(boxesFlag);
     }
@@ -91,6 +91,18 @@ function changeInputs(){
     bP2 = arrayBoxes[j+2].textContent = box2;
     bP3 = arrayBoxes[j+3].textContent = box3;
     bP4 = arrayBoxes[j+4].textContent = box4;
+}
+
+function verifyTry(){
+    for(let i = 0; i < userTry.length; i++){
+        if(userTry[i] == word[i]){
+            arrayBoxes[i].classList.add("greenletter");
+        } else if(word.includes(`${userTry[i]}`)){
+            arrayBoxes[i].classList.add("yellowletter");
+        } else{
+            arrayBoxes[i].classList.add("blackletter");
+        }
+    }
 }
 
 function resetInputs(){

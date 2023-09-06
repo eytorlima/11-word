@@ -140,9 +140,16 @@ body {
 
 .greenletter {
     background-color: #3aa394;
+    transition: 350ms;
 }
 .yellowletter {
     background-color: #d3ad69;
+    transition: 350ms;
+
+}
+.blackletter {
+    background-color: #312a2c;
+    transition: 350ms;
 }
 
 .keyboard {

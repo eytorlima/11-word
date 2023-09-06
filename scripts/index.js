@@ -15,7 +15,7 @@ var count = 0;
 var boxesFlag = 0;
 var j = 0;
 
-var bP0, bP1, bP2, bP3, bP4;
+// var bP0, bP1, bP2, bP3, bP4;
 var box0 = '', box1 = '', box2 = '', box3 = '', box4 = '';
 
 for(let i = 0; i < arrayTeclas.length; i++){
@@ -24,7 +24,6 @@ for(let i = 0; i < arrayTeclas.length; i++){
         if(count < 5){
             addInput();
             userTry += letter.toLowerCase();
-            console.log(userTry);
         }
     });
 }
@@ -40,12 +39,11 @@ keyDelete.addEventListener("click", () => {
 
 keyEnter.addEventListener("click", () => {
     changeInputs();
-    if(bP0 == '' || bP1 == '' || bP2 == '' || bP3 == '' || bP4 == ''){
+    if(box0 == '' || box1 == '' || box2 == '' || box3 == '' || box4 == ''){
         window.alert("Preencha todos os campos adequadamente!");
     } else {
         verifyTry();
         resetInputs();
-        console.log(boxesFlag);
     }
 });
 
@@ -86,11 +84,17 @@ function addInput(){
 }
 
 function changeInputs(){
-    bP0 = arrayBoxes[j].textContent = box0;
-    bP1 = arrayBoxes[j+1].textContent = box1;
-    bP2 = arrayBoxes[j+2].textContent = box2;
-    bP3 = arrayBoxes[j+3].textContent = box3;
-    bP4 = arrayBoxes[j+4].textContent = box4;
+    arrayBoxes[j].textContent = box0;
+    arrayBoxes[j+1].textContent = box1;
+    arrayBoxes[j+2].textContent = box2;
+    arrayBoxes[j+3].textContent = box3;
+    arrayBoxes[j+4].textContent = box4;
+
+    // bP0 = arrayBoxes[j];
+    // bP1 = arrayBoxes[j+1];
+    // bP2 = arrayBoxes[j+2];
+    // bP3 = arrayBoxes[j+3];
+    // bP4 = arrayBoxes[j+4];
 }
 
 function verifyTry(){
@@ -102,6 +106,12 @@ function verifyTry(){
         } else{
             arrayBoxes[i].classList.add("blackletter");
         }
+    }
+
+    if(userTry == word){
+        setInterval(() => {
+            window.alert("Parabéns, você venceu!");
+        }, 300);
     }
 }
 

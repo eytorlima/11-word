@@ -3,7 +3,7 @@ const palavras = [
     "ajuda", "ajust", "alçar", "aleia", "além", "alert", "aliar", "alma", "altar", "amado",
     "amigo", "anexo", "anexo", "ânglo", "anota", "antre", "anual", "aonde", "aparo", "aquém",
     "arder", "argir", "artes", "ascia", "ásper", "atéia", "áulio", "aument", "aura", "aureo",
-    "avali", "azado", "basta", "belga", "belos", "bença", "besta", "bílis", "bocal", "bomia",
+    "avali", "azado", "basta", "belga", "belos", "bença", "besta", "bocal", "bomia",
     "borra", "breve", "cabel", "cabra", "calar", "cama", "campo", "canto", "caras", "ceder",
     "censo", "cigar", "circo", "claro", "clero", "coisa", "comer", "copas", "corça", "costa",
     "criar", "cruel", "cuida", "dança", "darás", "dardo", "darlo", "data", "debil", "dedos",
@@ -14,7 +14,7 @@ const palavras = [
     "gesto", "golpe", "grava", "guarda", "harpa", "homem", "horas", "hóspes", "ícone", "idade",
     "igual", "ilhar", "ilude", "inato", "india", "irão", "iura", "larga", "larva",
     "lenha", "letra", "libra", "livra", "local", "lugar", "lutas", "macio", "manta", "marco",
-    "máris", "mastro", "mauva", "média", "medro", "melas", "menta", "mesmo", "milha", "mínio",
+    "máris", "mastro", "malva", "média", "medro", "melas", "menta", "mesmo", "milha", "mínio",
     "miolo", "modo", "mole", "moral", "morro", "morte", "móvel", "mundo", "nadar", "nasça",
     "natal", "neura", "noite", "notas", "novas", "noves", "oásis", "óbvio", "ócio", "órgão",
     "ouro", "óvulo", "palar", "palha", "palma", "pança", "parar", "passo", "pérola", "perto",
@@ -23,14 +23,14 @@ const palavras = [
     "real", "recos", "regra", "reino", "rente", "respe", "riach", "riçar", "rico", "risco",
     "rocha", "rosas", "sabor", "sabor", "saias", "salva", "salvo", "saúde", "selva", "semea",
     "serra", "setas", "sider", "silvo", "sobra", "sobre", "sócio", "solto", "sorve", "sovar",
-    "suado", "suave", "suave", "subir", "sufre", "sulco", "sulfo", "taboa", "talco", "talha",
+    "suado", "suave", "suave", "subir", "sulco", "sulfo", "taboa", "talco", "talha",
     "tampa", "tanja", "tango", "tanto", "tapas", "tarde", "tardes", "teama", "tecno", "teias",
     "teixe", "tenaz", "tenta", "tenso", "térça", "terço", "terno", "terre", "tijol", "tímbo",
     "tirar", "tocas", "tofus", "tomar", "topos", "torno", "torre", "totem", "toxos", "trago",
     "trata", "trato", "trava", "traze", "treme", "treva", "triun", "troca", "trope", "trova",
     "turva", "úlcera", "úmida", "unção", "úrico", "urros", "vaca", "vadia", "vagar", "vale",
     "vapor", "varas", "veado", "venda", "verbo", "verde", "verme", "vesgo", "vexar", "vibra",
-    "vício", "vigor", "vinco", "vírus", "visco", "vitro", "viver", "volve", "vulco", "xisto"
+    "vício", "vigor", "vinco", "vírus", "visco", "vitro", "viver"
 ];
 const palavras2 = [
     'abrir', 'achar', 'aluno', 'amiga',
@@ -78,7 +78,7 @@ const palavraD = [
 ];
 const palavraE = [
      'estão', 'elevo', 'ergue', 'elias', 'exame', 'exato', 'eluda', 'espor',
-        'esteio', 'etapa', 'edson', 'erika', 'elias', 'endos', 'escoa', 'esfor', 'entra'
+        'esteio', 'etapa', 'edson', 'erika', 'elias', 'endos', 'escoa', 'entra'
 ];
 const palavraF = [
     'fazem', 'fique', 'foram', 'fusca', 'fraco', 'falar', 'ferro', 'fugir', 'fundo',
@@ -113,20 +113,20 @@ const palavraM = [
         'muito', 'meigo', 'musas', 'mesmo', 'mural', 'muito', 'minas', 'mural', 'minha', 'mesmo'
 ];
 const palavraN = [
-    'neném', 'neves', 'nobre', 'natal', 'nódoa', 'nível', 'noite', 'negro', 'nunca', 'neste',
-        'naive', 'nobre', 'ningu', 'neném', 'natal', 'naive', 'neste', 'nobre', 'nunca', 'naive'
+    'neném', 'neves', 'nobre', 'natal', 'nível', 'noite', 'negro', 'nunca', 'neste',
+        'naive', 'nobre', 'neném', 'natal', 'neste', 'nobre', 'nunca',
 ];
 const palavraO = [
-    'olhos', 'outra', 'ordem', 'ouvid', 'obras', 'opini', 'obter', 'outro', 'olhos', 'opini',
-        'ouvid', 'ordem', 'outro', 'obter', 'ouvid', 'obras', 'outra', 'orval', 'opini', 'obras'
+    'olhos', 'outra', 'ordem', 'obras', 'obter', 'outro', 'olhos',
+         'ordem', 'outro', 'obter', 'obras', 'outra', 'orval', 'obras'
 ];
 const palavraP = [
-    'passe', 'prato', 'parec', 'perto', 'pobre', 'pedra', 'perto', 'peixe', 'pobre', 'plena',
-        'pelas', 'prata', 'pleno', 'plena', 'pazia', 'ponto', 'peixe', 'prato', 'pleno', 'pedro'
+    'passe', 'prato', 'perto', 'pobre', 'pedra', 'perto', 'peixe', 'pobre', 'plena',
+        'pelas', 'prata', 'pleno', 'plena', 'ponto', 'peixe', 'prato', 'pleno', 'pedro'
 ];
 const palavraQ = [
-    'quase', 'queri', 'queri', 'queri', 'quest', 'queri', 'quais', 'quero', 'quest', 'queri',
-    'quero', 'quest', 'quest', 'quais', 'quero', 'quest', 'quase', 'quais', 'queri', 'quest'
+    'quase', 'quais', 'quero',
+    'quero', 'quais', 'quero', 'quase', 'quais'
 ];
 const palavraR = [
     'rádio', 'rolar', 'roupa', 'raios', 'rival', 'risos', 'rolar', 'raios', 'razão', 'rosto',

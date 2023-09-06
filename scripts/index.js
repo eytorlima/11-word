@@ -13,9 +13,10 @@ var userTry = '';
 var letter = '';
 var count = 0;
 var boxesFlag = 0;
+var j = 0;
 
 var bP0, bP1, bP2, bP3, bP4;
-var box0, box1, box2, box3, box4;
+var box0 = '', box1 = '', box2 = '', box3 = '', box4 = '';
 
 for(let i = 0; i < arrayTeclas.length; i++){
     arrayTeclas[i].addEventListener("click", () => {
@@ -35,6 +36,17 @@ keyDelete.addEventListener("click", () => {
     }
     userTry = userTry.substring(0, userTry.length - 1);
     addInput();
+});
+
+keyEnter.addEventListener("click", () => {
+    changeInputs();
+    if(bP0 == '' || bP1 == '' || bP2 == '' || bP3 == '' || bP4 == ''){
+        window.alert("Preencha todos os campos adequadamente!");
+    } else {
+
+        resetInputs();
+        console.log(boxesFlag);
+    }
 });
 
 function addInput(){
@@ -74,12 +86,17 @@ function addInput(){
 }
 
 function changeInputs(){
-    for(let i = 0; i < 1; i+(5*boxesFlag)){
-        bP0 = arrayBoxes[i].textContent = box0;
-        bP1 = arrayBoxes[i+1].textContent = box1;
-        bP2 = arrayBoxes[i+2].textContent = box2;
-        bP3 = arrayBoxes[i+3].textContent = box3;
-        bP4 = arrayBoxes[i+4].textContent = box4;
-        break;
-    }
+    bP0 = arrayBoxes[j].textContent = box0;
+    bP1 = arrayBoxes[j+1].textContent = box1;
+    bP2 = arrayBoxes[j+2].textContent = box2;
+    bP3 = arrayBoxes[j+3].textContent = box3;
+    bP4 = arrayBoxes[j+4].textContent = box4;
+}
+
+function resetInputs(){
+    box0 = '', box1 = '', box2 = '', box3 = '', box4 = '';
+    userTry = '';
+    boxesFlag++;
+    count = 0;
+    j = 5*boxesFlag
 }

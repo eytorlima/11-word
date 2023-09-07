@@ -14,6 +14,7 @@ var count = 0;
 var boxesFlag = 0;
 var j = 0;
 var line = 0;
+var winner = false;
 
 var box0 = '', box1 = '', box2 = '', box3 = '', box4 = '';
 
@@ -46,7 +47,9 @@ keyEnter.addEventListener("click", () => {
         window.alert("Preencha todos os campos adequadamente!");
     } else {
         verifyTry();
-        resetInputs();
+        if(winner == false){
+            resetInputs();
+        }
     }
 });
 
@@ -119,17 +122,27 @@ function verifyTry(){
         }
     }
 
-    if(userTry != word && line == 30){
-        setInterval(() => {
-            window.alert(`Que pena, você perdeu!\nA palavra era ${word}.\nAperte F5 duas vezes para jogar novamente!`);
-        }, 300);
-    }
-
-
-    if(userTry == word){
-        setInterval(() => {
-            window.alert("Parabéns, você venceu!\nAperte F5 duas vezes para jogar novamente!");
-        }, 300);
+    if(innerWidth > 1023){
+        if(userTry == word){
+            setInterval(() => {
+                window.alert("Parabéns, você venceu!\nAperte F5 duas vezes para jogar novamente!");
+            }, 300);
+        } else if(userTry != word && line == 30){
+            setInterval(() => {
+                window.alert(`Que pena, você perdeu!\nA palavra era ${word}.\nAperte F5 duas vezes para jogar novamente!`);
+            }, 300);
+        }
+    } else {
+        if(userTry == word){
+            setTimeout(() => {
+                window.alert("Parabéns, você venceu!\nReinicie a página para jogar novamente!");
+            }, 300);
+            winner = true;
+        } else if(userTry != word && line == 30){
+            setTimeout(() => {
+                window.alert(`Que pena, você perdeu!\nA palavra era ${word}.\nReinicie a página para jogar novamente!`);
+            }, 300);
+        }
     }
 }
 

@@ -14,7 +14,7 @@ const palavras = [
     "gesto", "golpe", "grava", "guarda", "harpa", "homem", "horas", "hóspes", "ícone", "idade",
     "igual", "ilhar", "ilude", "inato", "india", "irão", "iura", "larga", "larva",
     "lenha", "letra", "libra", "livra", "local", "lugar", "lutas", "macio", "manta", "marco",
-    "máris", "mastro", "malva", "média", "medro", "melas", "menta", "mesmo", "milha", "mínio",
+    "máris", "mastro", "malva", "média", "medro", "menta", "mesmo", "milha", "mínio",
     "miolo", "modo", "mole", "moral", "morro", "morte", "móvel", "mundo", "nadar", "nasça",
     "natal", "neura", "noite", "notas", "novas", "noves", "oásis", "óbvio", "ócio", "órgão",
     "ouro", "óvulo", "palar", "palha", "palma", "pança", "parar", "passo", "pérola", "perto",
@@ -114,7 +114,7 @@ const palavraM = [
 ];
 const palavraN = [
     'neném', 'neves', 'nobre', 'natal', 'nível', 'noite', 'negro', 'nunca', 'neste',
-        'naive', 'nobre', 'neném', 'natal', 'neste', 'nobre', 'nunca',
+    'nobre', 'neném', 'natal', 'neste', 'nobre', 'nunca',
 ];
 const palavraO = [
     'olhos', 'outra', 'ordem', 'obras', 'obter', 'outro', 'olhos',
@@ -271,9 +271,9 @@ for(let i = 0; i < palavras.length; i++){
     }
 }
 
-const nr = Math.floor(Math.random() * 572);
+const nr = Math.floor(Math.random() * 549);
 var word = palavras[nr];
 word = word.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 export {word};
 
-//571 Palavras diferentes de 5 letras //
+//549 Palavras diferentes de 5 letras //

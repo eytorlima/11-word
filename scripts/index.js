@@ -1,5 +1,4 @@
 import {word} from '../scripts/words.js' ;
-console.log(word);
 //////
 const teclas = document.querySelectorAll(".tecla");
 const arrayTeclas = Array.from(teclas);
@@ -93,6 +92,12 @@ function changeInputs(){
 
 function verifyTry(){
     for(let i = 0; i < userTry.length; i++){
+        if(line <= 25){
+            arrayBoxes[i+line].classList.remove("box-open");
+        }
+    }
+
+    for(let i = 0; i < userTry.length; i++){
         if(userTry[i] == word[i]){
             arrayBoxes[i+line].classList.add("greenletter");
         } else if(word.includes(`${userTry[i]}`)){
@@ -104,9 +109,15 @@ function verifyTry(){
 
     line += 5;
 
-    if(userTry != word && line == 10){
+    for(let i = 0; i < userTry.length; i++){
+        if(line <= 25){
+            arrayBoxes[i+line].classList.add("box-open");
+        }
+    }
+
+    if(userTry != word && line == 30){
         setInterval(() => {
-            window.alert(`Que pena, você perdeu!\nA palavra era <strong>${word}</strong>.\nAperte F5 duas vezes para jogar novamente!`);
+            window.alert(`Que pena, você perdeu!\nA palavra era ${word}.\nAperte F5 duas vezes para jogar novamente!`);
         }, 300);
     }
 
@@ -124,5 +135,4 @@ function resetInputs(){
     boxesFlag++;
     count = 0;
     j = 5*boxesFlag
-    console.log(line);
 }

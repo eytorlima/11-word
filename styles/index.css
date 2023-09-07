@@ -20,7 +20,7 @@ body {
 .title {
     width: fit-content;
     align-self: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 38px;
     letter-spacing: 5px;
 }
@@ -136,6 +136,12 @@ body {
     font-size: 54px;
     font-weight: 600;
     user-select: none;
+}
+
+.box-open {
+    background-color: #6e5c62;
+    border: solid 7px #4c4347;
+    transition: 300ms;
 }
 
 .greenletter {

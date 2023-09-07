@@ -17,6 +17,10 @@ var line = 0;
 
 var box0 = '', box1 = '', box2 = '', box3 = '', box4 = '';
 
+for(let i = 0; i < 5; i++){
+    arrayBoxes[i].classList.add("box-open");
+}
+
 for(let i = 0; i < arrayTeclas.length; i++){
     arrayTeclas[i].addEventListener("click", () => {
         letter = arrayTeclas[i].textContent;

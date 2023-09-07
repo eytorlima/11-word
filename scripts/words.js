@@ -101,7 +101,7 @@ const palavraJ  = [
     'jogar', 'junho', 'julho', 'junto', 'julho', 'juíza', 'juiz', 'juiz', 'julgo', 'juízo'
 ];
 const palavraK = [
-    'karma', 'kayak', 'kappa', 'kaiak', 'karma', 'karaí', 'kiwi', 'karma', 'kayak', 'kappa',
+    'karma', 'kayak', 'kappa', 'karma', 'karaí', 'kiwi', 'karma', 'kayak', 'kappa',
         'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma', 'karma'
 ];
 const palavraL = [

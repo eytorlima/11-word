@@ -14,8 +14,8 @@ var letter = '';
 var count = 0;
 var boxesFlag = 0;
 var j = 0;
+var line = 0;
 
-// var bP0, bP1, bP2, bP3, bP4;
 var box0 = '', box1 = '', box2 = '', box3 = '', box4 = '';
 
 for(let i = 0; i < arrayTeclas.length; i++){
@@ -89,28 +89,31 @@ function changeInputs(){
     arrayBoxes[j+2].textContent = box2;
     arrayBoxes[j+3].textContent = box3;
     arrayBoxes[j+4].textContent = box4;
-
-    // bP0 = arrayBoxes[j];
-    // bP1 = arrayBoxes[j+1];
-    // bP2 = arrayBoxes[j+2];
-    // bP3 = arrayBoxes[j+3];
-    // bP4 = arrayBoxes[j+4];
 }
 
 function verifyTry(){
     for(let i = 0; i < userTry.length; i++){
         if(userTry[i] == word[i]){
-            arrayBoxes[i].classList.add("greenletter");
+            arrayBoxes[i+line].classList.add("greenletter");
         } else if(word.includes(`${userTry[i]}`)){
-            arrayBoxes[i].classList.add("yellowletter");
+            arrayBoxes[i+line].classList.add("yellowletter");
         } else{
-            arrayBoxes[i].classList.add("blackletter");
+            arrayBoxes[i+line].classList.add("blackletter");
         }
     }
 
+    line += 5;
+
+    if(userTry != word && line == 10){
+        setInterval(() => {
+            window.alert(`Que pena, você perdeu!\nA palavra era <strong>${word}</strong>.\nAperte F5 duas vezes para jogar novamente!`);
+        }, 300);
+    }
+
+
     if(userTry == word){
         setInterval(() => {
-            window.alert("Parabéns, você venceu!");
+            window.alert("Parabéns, você venceu!\nAperte F5 duas vezes para jogar novamente!");
         }, 300);
     }
 }
@@ -121,4 +124,5 @@ function resetInputs(){
     boxesFlag++;
     count = 0;
     j = 5*boxesFlag
+    console.log(line);
 }

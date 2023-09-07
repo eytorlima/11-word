@@ -212,3 +212,54 @@ body {
 .l3 {
     margin-left: 40px;
 }
+
+@media (max-width: 700px){
+    .text {
+        width: 95%;
+        align-self: center;
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    .main {
+        margin-top: 10px;
+        width: 75%;
+        gap: 2px;
+    }
+
+    .box {
+        height: 70px;
+        font-size: 34px;
+    }
+    
+    .keyboard {
+        width: 95%;
+        align-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .line {
+        gap: 4px;
+        height: fit-content;
+    }
+
+    .line button {
+        font-size: 24px;
+        height: fit-content;
+        padding: 5px 0;
+    }
+
+    .line .enter{
+        margin-left: 0px;
+    }
+    
+    .line .delete {
+        margin-left: 0px;
+        height: 100%;
+    }
+
+    .l2, .l3 {
+        margin-left: 0;
+    }
+}

@@ -61,7 +61,7 @@ const palavras2 = [
     'viver', 'zonas', 'zonas', 'úteis', 'única',
 ];
 const palavraA = [
-    'amigo', 'abrir', 'açúcar', 'adote', 'andar', 'anexo', 'aluno', 'alma', 'amule', 'altar',
+    'amigo', 'amiga', 'abrir', 'açúcar', 'adote', 'andar', 'anexo', 'aluno', 'alma', 'amule', 'altar',
     'afago', 'ágape', 'ágil', 'aéreo', 'ação', 'acaso', 'álamo', 'água', 'alert', 'amule'
 ];
 const palavraB = [
@@ -77,12 +77,12 @@ const palavraD = [
         'dólar', 'décio', 'dêver', 'darço', 'doçur', 'damao', 'dona', 'domar', 'dêmos', 'dardo'
 ];
 const palavraE = [
-     'estão', 'elevo', 'ergue', 'elias', 'exame', 'exato', 'eluda', 'espor',
-        'esteio', 'etapa', 'edson', 'erika', 'elias', 'endos', 'escoa', 'entra'
+     'estão', 'elevo', 'ergue', 'exame', 'exato',
+     'etapa', 'escoa', 'entra'
 ];
 const palavraF = [
     'fazem', 'fique', 'foram', 'fusca', 'fraco', 'falar', 'ferro', 'fugir', 'fundo',
-        'falha', 'força', 'frota', 'fizem', 'fuzil', 'feixe', 'fundo', 'frase', 'fuzis', 'famos'
+        'falha', 'força', 'frota', 'fizem', 'fuzil', 'feixe', 'fundo', 'frase', 'fuzis', 'fomos'
 ];
 const palavraG = [
     'grupo', 'grava', 'ganha', 'guapa', 'grilo', 'graça', 'gíria', 'graça', 'grito', 'gente',

@@ -61,8 +61,8 @@ const palavras2 = [
     'viver', 'zonas', 'zonas', 'úteis', 'única',
 ];
 const palavraA = [
-    'amigo', 'amiga', 'abrir', 'açúcar', 'adote', 'andar', 'anexo', 'aluno', 'alma', 'amule', 'altar',
-    'afago', 'ágape', 'ágil', 'aéreo', 'ação', 'acaso', 'álamo', 'água', 'alert', 'amule'
+    'amigo', 'amiga', 'abrir', 'açúcar', 'adote', 'andar', 'anexo', 'aluno', 'alma', 'altar',
+    'afago', 'ágape', 'ágil', 'aéreo', 'ação', 'acaso', 'álamo', 'água', 'alert'
 ];
 const palavraB = [
     'bombe', 'batom', 'bravo', 'brasa', 'bruto', 'banco', 'barco', 'balsa', 'brisa', 'belo',
@@ -271,7 +271,14 @@ for(let i = 0; i < palavras.length; i++){
     }
 }
 
-const nr = Math.floor(Math.random() * 549);
+// var c = 0;
+
+// for(let i = 0; i < palavras.length; i++){
+//     c++;
+// }
+
+// console.log(c);
+const nr = Math.floor(Math.random() * 541);
 var word = palavras[nr];
 word = word.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 export {word};

@@ -1,5 +1,5 @@
 import {word} from '../scripts/words.js' ;
-console.log("teste");
+console.log(word);
 //////
 const teclas = document.querySelectorAll(".tecla");
 const arrayTeclas = Array.from(teclas);
@@ -17,6 +17,7 @@ var j = 0;
 var line = 0;
 var winner = false;
 
+var gL = '', yL = '', bL = ''; 
 var box0 = '', box1 = '', box2 = '', box3 = '', box4 = '';
 
 for(let i = 0; i < 5; i++){
@@ -108,12 +109,19 @@ function verifyTry(){
     for(let i = 0; i < userTry.length; i++){
         if(userTry[i] == word[i]){
             arrayBoxes[i+line].classList.add("greenletter");
+            gL = userTry[i];
+            changeKeyboard();
         } else if(word.includes(`${userTry[i]}`)){
             arrayBoxes[i+line].classList.add("yellowletter");
+            yL = userTry[i];
+        	changeKeyboard();
         } else{
             arrayBoxes[i+line].classList.add("blackletter");
+            bL = arrayBoxes[i+line].textContent.toLowerCase();
+            changeKeyboard();
         }
     }
+
 
     line += 5;
 
@@ -143,6 +151,18 @@ function verifyTry(){
             setTimeout(() => {
                 window.alert(`Que pena, você perdeu!\nA palavra era ${word}.\nReinicie a página para jogar novamente!`);
             }, 300);
+        }
+    }
+}
+
+function changeKeyboard(){
+    for(let i = 0; i < arrayTeclas.length; i++){
+        if(arrayTeclas[i].textContent.toLowerCase() == gL){
+            arrayTeclas[i].style.background = "#3aa394";
+        } else if(arrayTeclas[i].textContent.toLowerCase() == yL){
+            arrayTeclas[i].style.background = "#d3ad69";
+        } else if(arrayTeclas[i].textContent.toLowerCase() == bL){
+            arrayTeclas[i].style.opacity = "0.6";
         }
     }
 }

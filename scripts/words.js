@@ -1,11 +1,11 @@
 const palavras = [
-    "abrir", "acima", "acode", "acres", "adoce", "aflor", "ágape", "agir", "água", "airos",
-    "ajuda", "ajust", "alçar", "aleia", "além", "alert", "aliar", "alma", "altar", "amado",
-    "amigo", "anexo", "anexo", "ânglo", "anota", "antre", "anual", "aonde", "aparo", "aquém",
+    "abrir", "acima", "acode", "acres", "adoce", "ágape", "agir", "água",
+    "ajuda", "ajude", "altar", "altos", "altas", "aliar", "almas", "amado",
+    "amigo", "anexo", "anota","anual", "aonde", "aparo", "aquém",
     "arder", "argir", "artes", "ascia", "ásper", "atéia", "áulio", "aument", "aura", "aureo",
     "avali", "azado", "basta", "belga", "belos", "bença", "besta", "bocal", "bomia",
     "borra", "breve", "cabel", "cabra", "calar", "cama", "campo", "canto", "caras", "ceder",
-    "censo", "cigar", "circo", "claro", "clero", "coisa", "comer", "copas", "corça", "costa",
+    "censo", "circo", "claro", "clero", "coisa", "comer", "copas", "corça", "costa",
     "criar", "cruel", "cuida", "dança", "darás", "dardo", "darlo", "data", "debil", "dedos",
     "defaz", "deixa", "dente", "desejo", "desta", "dizer", "doçes", "domar", "dorso", "dotar",
     "douto", "drama", "dúbia", "duplo", "efeto", "elide", "emana", "enxer", "equal",
@@ -278,9 +278,9 @@ for(let i = 0; i < palavras.length; i++){
 // }
 
 // console.log(c);
-const nr = Math.floor(Math.random() * 541);
+const nr = Math.floor(Math.random() * 536);
 var word = palavras[nr];
 word = word.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 export {word};
 
-//549 Palavras diferentes de 5 letras //
+//535 Palavras diferentes de 5 letras //

@@ -1,5 +1,4 @@
 import {word} from '../scripts/words.js' ;
-console.log(word);
 //////
 const teclas = document.querySelectorAll(".tecla");
 const arrayTeclas = Array.from(teclas);
